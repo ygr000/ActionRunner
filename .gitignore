@@ -1,4 +1,4 @@
-target/
+target/*
 !target/ActionRunner-1.0-SNAPSHOT.jar
 .idea/
 *.iml
