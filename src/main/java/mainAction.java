@@ -31,7 +31,10 @@ public class mainAction {
             ReadProperties.setValue("parentPath",args[0]);
             ReadProperties.setValue("stopMs",args[1]);
             ReadProperties.setValue("midu",args[2]);
-         //   System.out.println("图片路径："+ReadProperties.getValue("parentPath")+"  "+"停止时间"+ReadProperties.getValue("stopMs"));
+            if(args.length==5){
+                ReadProperties.setValue("charWidth",args[3]);
+                ReadProperties.setValue("charHeight",args[4]);
+            }
         }
         setPathAndMs();
         NoClearMv();

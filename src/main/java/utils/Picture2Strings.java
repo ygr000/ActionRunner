@@ -145,17 +145,12 @@ public static List<String> run(String imagePath) {
             grepChar=Picture2Strings.grepCharRev;
         }
         for (int j = miny; j < height; j=j+(hx)) {
-
-
             for (int i = minx; i < width; i=i+(wx)) {
-
-
                 int pixel = image.getRGB(i, j);
                 r = (pixel & 0xff0000) >> 16;
                 g = (pixel & 0xff00) >> 8;
                 b = (pixel & 0xff);
                 float gray=r * 0.3f + g * 0.59f + b * 0.11f;
-
                 if (gray < 15) {
                     sb.append(grepChar[0]);
                 } else if (15 <= gray && gray < 30) {
